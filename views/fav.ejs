@@ -8,15 +8,19 @@
 <body>
    
  <div>
+   <% if (result.length === 0) {%>
+     <h1>No Item there in favourite</h1>
+   <%}else{%>
     <% for (let i = 0; i < result.length; i++) {%>
      <h1>Item : <%= i+1%> </h1>
        <p>Name : <%=result[i].name %></p>
 
        <p>Writer: <%=result[i].writer %></p>
 
-       <p>Type: <%=result[i].dataType %></p>
+       <p>Type: <%=result[i].type %></p>
 
 
+    <%}%>
     <%}%>
 
  </div>

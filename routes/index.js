@@ -36,7 +36,7 @@ routes.post('/addFav',async (req,res) => {
     
     
 
-    pool.query("INSERT INTO favourite (name,writer,dataType) VALUES ?",[[[req.body.Title,req.body.Writer.substring(0,9),req.body.Type]]],(err,result,field)=> {
+    pool.query("INSERT INTO SlashHash (name,writer,type) VALUES ?",[[[req.body.Title,req.body.Writer.substring(0,9),req.body.Type]]],(err,result,field)=> {
         if (err){
             console.log(err)
             return;
@@ -49,14 +49,14 @@ routes.post('/addFav',async (req,res) => {
 })
 
 routes.get('/fav',(req,res) => {
-    pool.query(`select * from favourite`,(err,result,field) => {
+    pool.query(`select * from slashhash`,(err,result,field) => {
         if (err){
             console.log("error")
             return res.redirect('back');
         }
          
 
-        let data = [];
+       
 
      
     
