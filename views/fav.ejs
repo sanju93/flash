@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Favourites</title>
+</head>
+<body>
+   
+ <div>
+    <% for (let i = 0; i < result.length; i++) {%>
+     <h1>Item : <%= i+1%> </h1>
+       <p>Name : <%=result[i].name %></p>
+
+       <p>Writer: <%=result[i].writer %></p>
+
+       <p>Type: <%=result[i].dataType %></p>
+
+
+    <%}%>
+
+ </div>
+</body>
+</html>
